@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaRegBell,FaSearch ,FaUser,} from "react-icons/fa";
+import {FaRegBell,FaSearch} from "react-icons/fa";
 import { BsCartCheck } from "react-icons/bs";
 
 const MainMenu = () => {

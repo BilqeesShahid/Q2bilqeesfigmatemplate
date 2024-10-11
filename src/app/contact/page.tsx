@@ -1,48 +1,9 @@
-"use client";
-import { useState } from 'react';
-
 import Link from 'next/link';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 
 const Contact = () => {
-  const [emailSubmitted,setEmailSubmitted]= useState(false)
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const data = {
-      email: e.currentTarget.email.value,
-      subject: e.currentTarget.subject.value,
-      message: e.currentTarget.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
-  
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSONdata,
-    };
-  
-    try {
-      const response = await fetch(endpoint, options);
-      if (!response.ok) {
-        const errorText = await response.text(); // Get the actual error response text
-        console.error('Error response:', errorText);
-        throw new Error('Failed to send message');
-      }
-  
-      const resData = await response.json();
-      console.log('Message Sent.');
-      setEmailSubmitted(true);
-    } catch (error) {
-      console.error('An error occurred while sending the message:', error);
-    }
-  };
-  
-
+   
    return (
     <section className='bg-slate-300 grid gap-8 py-12 px-4 md:grid-cols-2 md:py-24 md:px-12 lg:px-24 relative'>
     {/* First Column (Text & Social Links) */}
@@ -73,64 +34,7 @@ const Contact = () => {
         <img src="/image.png" alt="contactpic" className="w-24 h-24 md:w-36 md:h-36 object-cover" />
       </div>
   
-      <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
-        {/* Email Input */}
-        <div>
-          <label htmlFor="email" className='text-black block mb-2 text-sm font-medium'>
-            Your email
-          </label>
-          <input
-            name="email"
-            type="email"
-            id="email"
-            required
-            className='bg-white border border-gray-300 placeholder-slate-400 text-black rounded-lg block w-full p-2'
-            placeholder='email us'
-          />
-        </div>
-        
-        {/* Subject Input */}
-        <div>
-          <label htmlFor="subject" className='text-black block mb-2 text-sm font-medium'>
-            Subject
-          </label>
-          <input
-            name="subject"
-            type="text"
-            id="subject"
-            required
-            className='bg-white border border-gray-300 placeholder-slate-400 text-black rounded-lg block w-full p-2'
-            placeholder='welcome for your inquiry'
-          />
-        </div>
-        
-        {/* Message Textarea */}
-        <div>
-          <label htmlFor="message" className='text-black block mb-2 text-sm font-medium'>
-            Message
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            required
-            className='bg-white border border-gray-300 placeholder-slate-400 text-black rounded-lg block w-full p-2'
-            placeholder="Let's talk about your requirements..."
-          />
-        </div>
-        
-        {/* Submit Button */}
-        <button 
-          type="submit"
-          className='bg-myblue hover:bg-myorange text-white font-medium py-2 px-4 rounded-lg w-full'
-        >
-          Send Message
-        </button>
-        
-        {/* Success Message */}
-        {emailSubmitted && (
-          <p className='text-green-500 text-sm mt-2'>Email Sent Successfully</p>
-        )}
-      </form>
+       
     </div>
   </section>
   
