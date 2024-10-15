@@ -27,7 +27,7 @@ const Contact = () => {
     {/* Second Column (Images & Email Form) */}
     <div>
       <div className='flex flex-wrap justify-center gap-3 mb-6'>
-        <img src="/study.jpg" alt="contactpic" className="w-25 h-25 md:w-60 md:h-70  object-cover" />
+        <img src="/study.jpg" alt="contactpic" className="w-25 h-25 md:w-60 md:h-70  object-cover"></img>
       </div>
   
        
