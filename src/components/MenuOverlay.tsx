@@ -4,7 +4,7 @@ import NavLink from './NavLinks'
 
 
 interface PropsType{
-  links:any;
+  links:string;
 }
 
 const MenuOverlay : React.FC<PropsType> = ({links}) => {
