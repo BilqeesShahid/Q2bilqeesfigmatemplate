@@ -16,7 +16,7 @@ const FeaturedProducts = () => {
 </div>
 {/*category starts from here*/}
 {/*Dining*/}
- <div className='flex flex-wrap justify-around p-4 items-center gap-4 group'>
+ <div className='flex flex-wrap justify-around p-2 items-center gap-4 group'>
   <div className="block relative h-[23rem] shadow-xl overflow-hidden">
     <Image src="/bed1.jpg" alt="bedroom" width={300} height={400} className="object-cover h-64" />
     <div className="card-body">
