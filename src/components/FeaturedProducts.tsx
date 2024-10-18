@@ -16,12 +16,12 @@ const FeaturedProducts = () => {
 </div>
 {/*category starts from here*/}
 {/*Dining*/}
- <div className='flex flex-wrap justify-between items-center gap-4 group'>
+ <div className='flex flex-wrap justify-around p-4 items-center gap-4 group'>
   <div className="block relative h-[23rem] shadow-xl overflow-hidden">
     <Image src="/bed1.jpg" alt="bedroom" width={300} height={400} className="object-cover h-64" />
     <div className="card-body">
       <h2 className="card-title text-lg lg:text-xl text-myblue font-serif font-bold text-center mt-1">BedRoom</h2>
-      <p className='text-lg lg:text-xl font-bold text-black '>Luxurious and Comfy Bed Set</p>
+      <p className='text-lg lg:text-xl font-bold text-black '>Luxurious Comfy Bed Set</p>
       <div>
       <Button className='bg-myblue  hover:bg-transparent text-white
         hover:text-black scroll-m-20 border-b pb-2 text-xs rounded-xl 
@@ -61,7 +61,7 @@ const FeaturedProducts = () => {
     <Image src="/living.jpg" alt="living" width={300} height={400} className="object-cover h-64" />
     <div className="card-body">
       <h2 className="card-title text-lg lg:text-xl text-myblue font-serif font-bold text-center mt-1">Living Room</h2>
-      <p className='text-lg lg:text-xl font-bold text-black line-clamp-1'>Elegant and Modern Living Room Set</p>
+      <p className='text-lg lg:text-xl font-bold text-black line-clamp-1'>Elegant Living Room Set</p>
       <div> 
       <Button className='bg-myblue hover:bg-transparent text-white 
         hover:text-black scroll-m-20 border-b pb-2 text-xs rounded-xl 
@@ -81,7 +81,7 @@ const FeaturedProducts = () => {
     <Image src="/draw1.jpg" alt="drawing room" width={300} height={400} className="object-cover h-64" />
     <div className="card-body">
       <h2 className="card-title text-lg lg:text-xl text-myblue font-serif font-bold text-center mt-1">Drawing Room</h2>
-      <p className='text-lg lg:text-xl font-bold text-black '>Classic and Comfortable Drawing Room Set</p>
+      <p className='text-lg lg:text-xl font-bold text-black '>Classic Drawing Room Set</p>
       <div>
       <Button className='bg-myblue hover:bg-transparent text-white 
         hover:text-black scroll-m-20 border-b pb-2 text-xs rounded-xl 
